@@ -25,6 +25,14 @@ JQ_PLATFORMS = {
             "@platforms//cpu:x86_64",
         ],
     ),
+    "linux_s390x": struct(
+        release_platform = "linux-s390x",
+        compatible_with = [
+            "@platforms//os:linux",
+            "@platforms//cpu:s390x",
+        ],
+    ),
+
     "linux_arm64": struct(
         release_platform = "linux-arm64",
         compatible_with = [
@@ -49,6 +57,7 @@ DEFAULT_JQ_VERSION = "1.7"
 # shasum -b -a 384 [downloaded file] | awk '{ print $1 }' | xxd -r -p | base64
 JQ_VERSIONS = {
     "1.7": {
+        "linux-s390x": "sha384-CRDuJLBUoIokwtU4wmOJ1fsZ5Cb3IsVtmplntDd8NC95wy0SgMDKOlKtzEsh0uP0",
         "linux-amd64": "sha384-4wJ15NoxFf7r1Zf5YVGUeMPx/pfWlSfMJWLFcu4fUcBFe5L4BOpF/njEK8AH58od",
         "linux-arm64": "sha384-y9BwX+RyXf2a16xwtvcjHFfIBp3K3Ukyg4GjtmxBtynD/BKNf+0tuLtZx64TTI+/",
         "macos-amd64": "sha384-N0WdpiD8zl1k9888yGxWW/dHzztOTU+RTlZrzOYJMXXUUMqjnqXq8GwnHDsC9Lk3",

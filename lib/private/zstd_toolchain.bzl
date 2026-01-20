@@ -25,6 +25,12 @@ ZSTD_PLATFORMS = {
             "@platforms//cpu:aarch64",
         ],
     ),
+   "linux_s390x": struct(
+        compatible_with = [
+            "@platforms//os:linux",
+            "@platforms//cpu:s390x",
+        ],
+    ),
 }
 
 ZSTD_PREBUILT = {
@@ -43,6 +49,10 @@ ZSTD_PREBUILT = {
     "linux_arm64": (
         "https://github.com/aspect-build/zstd-prebuilt/releases/download/v1.5.6/zstd_linux_arm64",
         "82aacf8f1c67ff3c94e04afb0721a848bbba70fbf8249ee4bc4c9085afb84548",
+    ),
+    "linux_s390x": (
+        "https://github.com/vamsikrishna-siddu/bazel-lib/raw/refs/heads/s390x-new-changes/zstd",
+        "49a4b5018fe6bccaa1ab01dc9bc30698baa2132bcbbfb9c0f20920d11e6664a8",
     ),
 }
 
